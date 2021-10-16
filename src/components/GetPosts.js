@@ -26,8 +26,7 @@ function GetPosts(){
         <h1>HomePage Posts</h1>
             <Link to="/create-posts">Criar Post</Link>
         {posts.map((element) => {
-                return (
-                                                        
+                return (                                                        
                         <div key={element._id} className="card" style={{width: "18rem", fontColor: "red"}}>
                             <img src={element.pictureUrl} className="card-img-top" alt="Pitcture"/>
                             <div className="card-body">
