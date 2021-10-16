@@ -1,25 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
+// import Home from "./components/Home";
+// import Body from "./components/FormularioSite";
+import React from 'react';
+// import Navbar from 'react-bootstrap';
+// import Navbar from "./components/Navbar"
+// import 'bootstrap' from 'react-bootstrap';
+import {BrowserRouter} from 'react-router-dom';
+import {Route} from 'react-router-dom';
+import GetPosts from './components/GetPosts';
+import CreatePosts from './components/CreatePosts';
+import UpdatePosts from './components/UpdatePosts';
+import Delete from './components/Delete';
+// import FormularioSite from './components/FormularioSite'
+
+//Route é o que vai reinderizar o componente na rota estipulada (sempre recepe dois atributos principais PATH e COMPONENT)
+//Component reinderiza os componentes, dentro do component passamos o componente que estamos importando.
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      {/* <Navbar/> */}
+      <div>
+        <Route exact path="/" component={GetPosts} />
+        <Route path="/create-posts" component={CreatePosts} />
+        <Route path="/update-posts/:dinossauro" component={UpdatePosts} />
+        <Route path="/delete-posts/:dinossauro" component={Delete} />
+          {/* <GetPosts /> */}
+        {/* <Home/> */}
+      </div>
+    </BrowserRouter>
   );
 }
+
+
 
 export default App;

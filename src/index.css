@@ -11,3 +11,28 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.container{
+  color: red
+}
+
+form input, button{
+  margin-top: 15px;
+  width: 100px;
+  padding: 7px 3px;
+  border-radius: 7px;
+  border: 1px solid grey;
+  background-color: rgb(red, green, blue);
+}
+
+
+button:hover {
+  background-color: rgb(red, green, blue);
+}
+
+.nav-top {
+  height: 63px !important;
+  background-color: white !important;
+  border-top: 0.5px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb;
+}

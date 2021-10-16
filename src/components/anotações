@@ -1,0 +1,191 @@
+// import axios from 'axios';
+// import { useState, useEffect } from "react"
+// import React from "react"
+
+
+// function FormularioSite(props) {
+//     let id = "615f99f1a71c21001702f5a6"
+//     id = "615f9e28a71c21001702f5a7";
+//     const [formulario, setFormulario] = useState({
+//         // id:'',
+//         name:'',
+//         description:'',
+//         pictureUrl:''
+
+//     });
+
+// //////////////////////////////////////////////////////
+
+//     function handleChange(event) {
+//         setFormulario({...formulario,
+//             [event.target.name]: event.target.value
+//         }) 
+
+//         const image = formulario.pictureUrl
+//         return <div><img src={formulario.pictureUrl} /></div>
+//     }
+
+// //const { id } = useParams();
+// //const history = useHistory();
+
+
+//         async function handleSubmit (event){
+//             event.preventDefault()
+//             try{
+//             const response = await axios.post('https://ironrest.herokuapp.com/instahack/', formulario) //CREATE
+//             console.log(response)
+//             }catch(erro){console.log(erro)}            
+//         }
+
+// //////////////////////////////////////////////////////
+
+//         const [posts, setPosts] = useState([]); //
+//         async function getPosts (){
+            
+//             try{
+//                 const getposts = await axios.get('https://ironrest.herokuapp.com/instahack') //READ
+//                 setPosts(getposts.data)
+//                 setPosts([...formulario.data])
+//               console.log(getposts.data)
+//             }catch(erro){console.log(erro)}
+//     }
+//         useEffect(() => {   
+//             getPosts()
+//         }, [])
+
+//     console.log(posts)
+
+// //////////////////////////////////////////////////////
+// //Só é possível atualizar as informações na tela através do state
+// //O useState é um hooks que ajuda na atualização do state, ele trás duas informações (state e o método que atualiza esse state em específico)
+// //Outro detalhe é o valor inicial do state específico (permite que setamos um valor inicial ao state específico)
+
+//     const [postById, setpostById] = useState([]); //Só 
+//         console.log(postById)
+//     async function getPostById (){
+        
+//         try{
+            
+//             const postsId = await axios.get('https://ironrest.herokuapp.com/instahack/615f9e28a71c21001702f5a7') //READ
+//             console.log(postsId)
+//             console.log(postsId.data)
+//             setpostById({...postsId.data})
+            
+//         }catch(erro){console.log(erro)}
+// }
+//     useEffect(() => {   
+//         getPostById()
+//     }, [])
+
+// console.log(postById)
+
+// //////////////////////////////////////////////////////
+
+
+
+//     const [updates, setUpdate] = useState([formulario]);
+//     async function updatePosts(){       
+//         try{
+//         const updatePost = await axios.put('https://ironrest.herokuapp.com/instahack/615f9e28a71c21001702f5a7',formulario) //UPDATE
+//         // setUpdate(updatePost.data)
+//         console.log(updatePost)
+//         }catch(erro){console.log(erro)}       
+//     }
+    
+//     useEffect(() => {   
+//         updatePosts()
+//     }, [])
+//     console.log('AQUI É O PUT', updates)
+
+
+// //////////////////////////////////////////////////////
+
+    
+
+//     const [deleteElement, setDeleteElement] = useState([])
+//     async function deletePost() {
+//         try{
+//             const deletPost = await axios.delete('https://ironrest.herokuapp.com/instahack/615f9e28a71c21001702f5a7') //DELETE
+//             setDeleteElement(deletPost.data)
+//                 console.log(deletPost)
+//         }catch(erro){console.log(erro)}
+                    
+//     }
+    
+//     useEffect(() => {   
+//         deletePost()
+//     }, [])
+//     console.log('AQUI É O DELETE', deleteElement)       
+   
+
+//         // updatePosts()
+
+//     // function updatePosts() {
+
+//     //     try{
+//     //         const update = await axios.patch('https://ironrest.herokuapp.com/instahack/') //CREATE
+//     //         setPosts(update.data)
+//     //         console.log(update)
+//     //         }catch(erro){console.log(erro)}            
+//     //     }
+//     // }
+        
+        
+//         // Como pegar o array de posts e reinderizar na tela. ????
+//        //Ver primeira aula mod2 (promisse/Async)
+       
+
+//     return(
+//         <div>
+//             <form onSubmit={handleSubmit} > 
+//             {/* <label>id: <input type="{formulário._id}" name="ID" placeholder="ID" value={formulario.id} onChange={ handleChange }></input></label> */}
+//                 <label>Name: <input type="text" name="name" placeholder="Contact Name" value={formulario.name} onChange={ handleChange }></input></label>
+//                 <label>Description: <input type="text" name="description" placeholder="Description" value={formulario.description} onChange={ handleChange }></input></label>                
+//                 <label>Specialty: <input type="text" name="specialty" placeholder="Specialty" value={formulario.specialty} onChange={ handleChange }></input></label>                
+//                 <label>Picture: <input type="URL" name="pictureUrl" placeholder="Picture URL" value={formulario.pictureUrl} onChange={ handleChange }></input></label>
+//                 <div className="button">
+//                 <button type="submit">Submit</button>
+//                 </div>
+//             </form>   
+
+//             {/* Posso colocar o map aqui  dentro de chaves (sempre escrever JS dentro de chaves {}*/}
+
+//                {posts.map((element) => {
+//                    return (
+//                     <div key={element._id}>
+//                         <p>{element._id}</p>
+//                         <p>{element.name}</p>
+//                         <p>{element.description}</p>
+//                         <p>{element.specialty}</p>
+//                         <p>{element.pictureUrl}</p>
+//                     </div>  
+//                    )
+//                })                 
+//             }
+//         </div>
+//     );
+// }
+
+
+
+
+// export default FormularioSite
+
+
+// //Criar um arquivo para cada componente (reinderizar o PUT)
+// // recortar o post.map e testar sozinho. (feito)
+// //Fazer o CRUD completo (criar=>OK ler=>OK falta fazer =>>> atualizar=>PUT e deletar=>DELETE)
+// //Criar um novo botão verificar posts, esse botão aciona a nossa função getposts e reinderizar ela logo abaixo.
+// //GET puxar os dados da API e Map para reinderizar.
+// //Ver aula do dia 21/09/2021 CRUD => pegar o código.
+// //Lógica do update > pegar o get, reinderizar dentro do formulário =>(state inicial) 
+// //é a mesma lógica do post de imput controlado e na hora de enviar para a API enviar com o verbo PUT.*//
+// //o id virá entre {} porque é uma variável. Preciso passar o valor que contém na ID, precisamos concatenar entre chaves.
+// //
+
+// //POST e PUT precisam do segundo argumento.
+// //Delete e GET não precisam do segundo argumento (ambos apenas buscam a informação) Sempre passar uma rota concatenada de acordo com o ID que deseja acessar..
+
+// //Existem dois tipos de GET um pega tudo o que tem no database, e o outro buscamos algo específico usando o ID.
+
+
