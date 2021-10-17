@@ -33,7 +33,6 @@ function CreatePosts(props) {
             props.history.push("/")
             }catch(erro){console.log(erro)}            
         }
-
     return(
         <div className="container-criar">
             <form className="create-forms" onSubmit={handleSubmit} > 
@@ -48,7 +47,7 @@ function CreatePosts(props) {
             
                 <div className="button-create">
                     <button type="submit" className="btn btn-outline-primary btn-sm">Novo Post</button>
-                    <button type="submit" className="btn btn-outline-warning btn-sm" to="/">Voltar</button>                    
+                    <button className="btn btn-outline-warning btn-sm" to="/">Voltar</button>                    
                 </div>
             </form>  
         </div>

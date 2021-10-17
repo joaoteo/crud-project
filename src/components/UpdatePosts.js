@@ -63,7 +63,7 @@ function UpdatePosts(props){
                         <label className="campo-form-atualizar"><input className="campo-input"  type="URL" name="pictureUrl" placeholder="URL da sua foto :D ex: https://pngwing.com/pngs/905/1020/sponge.png" value={postById.pictureUrl} onChange={ handleChange }></input></label>
                         <div className="button-update">
                         <button type="submit" className="btn btn-outline-primary btn-sm">Atualizar</button>
-                        <button type="submit" className="btn btn-outline-warning btn-sm" to="/">Voltar</button>  
+                        <button className="btn btn-outline-warning btn-sm" to="/">Voltar</button>  
                         
                         </div>
                     </form>                                     
