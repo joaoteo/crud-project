@@ -25,7 +25,7 @@ function Delete(props){
     }
     
       return(
-        <div>                         
+        <div>                                  
            <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton >
                 <Modal.Title> <strong>Excluir Post</strong></Modal.Title>
@@ -35,7 +35,7 @@ function Delete(props){
                 </Modal.Body>
                 <Modal.Footer>
                 <Button style={{ backgroundColor: "#FFA900" }} onClick={handleDelete}>
-                    Excluir
+                    Confirmar
                 </Button>
                 </Modal.Footer>
             </Modal>            

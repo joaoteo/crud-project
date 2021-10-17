@@ -5,6 +5,7 @@ import { useParams, Link } from 'react-router-dom'; //trás o ID. É um hooks ta
 
 
 function UpdatePosts(props){
+    <h1>TESTE</h1>
     const {dinossauro} =  useParams()
     console.log( `teste ${useParams()}` )
     console.log(`TESTE ${dinossauro}`)
@@ -53,20 +54,20 @@ function UpdatePosts(props){
     }
 
         return(
-            <div>                         
+            <div className="container-atualizar">                         
                 <div key={postById._id}>
-                    <form onSubmit={handleSubmit} >             
-                        <label>Name: <input type="text" name="name" placeholder="Contact Name" value={postById.name} onChange={ handleChange }></input></label>
-                        <label>Description: <input type="text" name="description" placeholder="Description" value={postById.description} onChange={ handleChange }></input></label>                
-                        <label>Specialty: <input type="text" name="specialty" placeholder="Specialty" value={postById.specialty} onChange={ handleChange }></input></label>                
-                        <label>Picture: <input type="URL" name="pictureUrl" placeholder="Picture URL" value={postById.pictureUrl} onChange={ handleChange }></input></label>
-                        <div className="button">
-                        <button type="submit">Atualizar</button>
-                        <Link to="/">Voltar</Link>
+                    <form className="update-forms" onSubmit={handleSubmit} >             
+                        <label className="campo-form-atualizar"><input className="campo-input"  type="text" name="name" placeholder="Nome" value={postById.name} onChange={ handleChange }></input></label>
+                        <label className="campo-form-atualizar"><input className="campo-input"  type="text" name="description" placeholder="Sobre você" value={postById.description} onChange={ handleChange }></input></label>                
+                        <label className="campo-form-atualizar"><input className="campo-input"  type="text" name="specialty" placeholder="Especialidade" value={postById.specialty} onChange={ handleChange }></input></label>                
+                        <label className="campo-form-atualizar"><input className="campo-input"  type="URL" name="pictureUrl" placeholder="URL da sua foto :D ex: https://pngwing.com/pngs/905/1020/sponge.png" value={postById.pictureUrl} onChange={ handleChange }></input></label>
+                        <div className="button-update">
+                        <button type="submit" className="btn btn-outline-primary btn-sm">Atualizar</button>
+                        <button type="submit" className="btn btn-outline-warning btn-sm" to="/">Voltar</button>  
+                        
                         </div>
-                    </form>                    
+                    </form>                                     
                  </div>              
-                
             </div>
     );
 

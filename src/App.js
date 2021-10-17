@@ -20,13 +20,11 @@ function App() {
   return (
     <BrowserRouter>
       {/* <Navbar/> */}
-      <div>
+      <div className="container mt-5" >
         <Route exact path="/" component={GetPosts} />
         <Route path="/create-posts" component={CreatePosts} />
         <Route path="/update-posts/:dinossauro" component={UpdatePosts} />
-        <Route path="/delete-posts/:dinossauro" component={Delete} />
-          {/* <GetPosts /> */}
-        {/* <Home/> */}
+        <Route path="/delete-posts/:dinossauro" component={Delete} />        
       </div>
     </BrowserRouter>
   );
